@@ -33,35 +33,29 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				<!-- <configuration> <sharedLibraries> <sharedLibrary> <groupId>mysql</groupId> 
+					<artifactId>mysql-connector-java</artifactId> </sharedLibrary> </sharedLibraries> 
+					<cloudHubDeployment> <uri>https://anypoint.mulesoft.com</uri> <muleVersion>4.3.0</muleVersion> 
+					<username>frlncr2</username> <password>Frlncr2123</password> <applicationName>customer-rest-api-oity</applicationName> 
+					<environment>Sandbox</environment> <region>us-east-2</region> <workers>1</workers> 
+					<workerType>MICRO</workerType> <objectStoreV2>true</objectStoreV2> <properties> 
+					<env>prod</env> <encryptionKey>mulesofttraining</encryptionKey> </properties> 
+					</cloudHubDeployment> </configuration> -->
 				<configuration>
-					<sharedLibraries>
-						<sharedLibrary>
-							<groupId>mysql</groupId>
-							<artifactId>mysql-connector-java</artifactId>
-						</sharedLibrary>
-					</sharedLibraries>
-					<cloudHubDeployment>
-						<uri>https://anypoint.mulesoft.com</uri>
+					<armDeployment>
+						<applicationName>customers-rest-api</applicationName>
 						<muleVersion>4.3.0</muleVersion>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<target>mule3</target>
+						<targetType>server</targetType>
 						<username>frlncr2</username>
 						<password>Frlncr2123</password>
-						<applicationName>customer-rest-api-oity</applicationName>
 						<environment>Sandbox</environment>
-						<region>us-east-2</region>
-						<workers>1</workers>
-						<workerType>MICRO</workerType>
-						<objectStoreV2>true</objectStoreV2>
 						<properties>
 							<env>prod</env>
-							<encryptionKey>mulesofttraining</encryptionKey>
 						</properties>
-					</cloudHubDeployment>
+					</armDeployment>
 				</configuration>
-				<!-- <configuration> <armDeployment> <applicationName>customers-rest-api</applicationName> 
-					<muleVersion>4.3.0</muleVersion> <uri>https://anypoint.mulesoft.com</uri> 
-					<target>mule3</target> <targetType>server</targetType> <username>frlncr2</username> 
-					<password>Frlncr2123</password> <environment>Sandbox</environment> <properties> 
-					<env>prod</env> </properties> </armDeployment> </configuration> -->
 			</plugin>
 		</plugins>
 	</build>
