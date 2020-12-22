@@ -57,6 +57,11 @@
 						</properties>
 					</cloudHubDeployment>
 				</configuration>
+				<!-- <configuration> <armDeployment> <applicationName>customers-rest-api</applicationName> 
+					<muleVersion>4.3.0</muleVersion> <uri>https://anypoint.mulesoft.com</uri> 
+					<target>mule3</target> <targetType>server</targetType> <username>frlncr2</username> 
+					<password>Frlncr2123</password> <environment>Sandbox</environment> <properties> 
+					<env>prod</env> </properties> </armDeployment> </configuration> -->
 			</plugin>
 		</plugins>
 	</build>
